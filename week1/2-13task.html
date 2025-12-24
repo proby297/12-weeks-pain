@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // //1.
+        // 3 2 1 ;
+        // //2.
+        // 1 2 3 4 
+        // 1 2 3 4 5
+        // // 3.
+        // 1 2 3 4 
+        // // 4.
+        // for(let i = 2; i < 11;i++){
+        //     if(!Boolean(i % 2)) alert(i);
+        // }
+        // let i = 0;
+        // while(i < 3){
+        //     alert(`number ${i++}!`);
+            
+        // }
+        // let num;
+        // for(;;){
+        //     num = prompt('enter a number larger than 100','')
+        //     if(num > 100 || num == null || num == undefined) break;
+            
+        // }
+        // let num;
+
+        // do {
+        //   num = prompt("Enter a number greater than 100?", 0);
+        // } while (num <= 100 && num);//its better than my method
+        let range = +prompt('give me the range number','');
+        
+        for(let i = 2;i < range + 1;i++){
+            let sum = 0;
+            for(let tik = 1; tik < i + 1;tik++){
+                if(!(i % tik)) ++sum;
+                if(sum > 2) break;
+            }
+            if(sum === 2)alert(i);
+        }
+       
+    </script>
+</body>
+</html>
