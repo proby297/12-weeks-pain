@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <script>
+    // let user = {
+    //     name: "John",
+    //     age: 23,
+    //  }
+    //  let key = "name";
+    //  for( key in user){
+    //     alert( key );
+    //     alert( user[key]);
+    //  }
+    //  alert( user.key);// 👈this is not allowed. and it will 
+     //alert undefined.
+     //👇and this is allowd, this called square brackets in 
+     // object literal. computed properties
+     /*let fruit = prompt( "give me one name", "apple");
+     let bag = {
+        [fruit]: 7,
+     };//thats legal;
+     alert( bag[fruit])*/
+    //user.isAdmin = true;
+    // alert( user);
+    // console.log(user)
+    // delete user.age;
+    let code = {
+        "49": "germany",
+        "39": "canada",
+        "4": "china",
+        "2.5": "sss", //👈 also not a integer properties.
+        "+4": "sssss",//its not a integer properties. casuse it's
+        //cannot converted back and from the "+4" to 4 or "4".
+        "21": 'russia',
+    }
+    for(let key in code){
+        alert(key);
+    };
+    let user = {};
+    user.name = "John";
+    user.surname = "Smith";
+    user.name = "Peter";
+    delete user.name;
+    function isEmpty(obj) {
+        let noProperty = true;
+        for(let key in obj){
+            if(key in obj) noProperty = false;
+            
+        }
+        return noProperty;
+    }
+    function multiplyNumeric(obj){
+        for(let key in obj){
+            if( typeof(obj[key]) == 'number' ){
+                 obj[key] *= 2;
+            }
+       
+        }
+    }
+  </script>  
+</body>
+</html>
