@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        'use strict'
+        let user = {
+            name: "John",
+        }
+        //the reference above is legal and the object include a property 
+        //primitive string 'John' is accessable.
+        // but if we change the reference like below,
+        // the object {name} will lost.
+        user = null;
+        //there is no way to access it
+        // it(name: "John") will be junked.
+        "outgoing references do not matter. why?"
+        " cause it get the value from the outside "
+        "but no one cares about it ,so it would be junked as well"
+    </script>
+</body>
+</html>
