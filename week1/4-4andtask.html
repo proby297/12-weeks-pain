@@ -14,7 +14,72 @@
         user.sayHi = function() {
             alert('hello');
         };
-        user.sayHi();
+        user.sayHi();//the function in a object called method;
+        //we can say we got a method sayHi of object user;
+        //pre-declared function👇
+        function sayHiPre() {
+            alert('Hello')
+        }
+        user.sayHiPre = sayHiPre;
+        //we can say above code progress is OOP
+        //object-oriented programming
+        let user1 = {
+            sayHi: function() {
+                alert('Hello');
+            },
+            name: "ss",
+            sayHi2() {
+                //'this' is the 'current object'
+                alert(this.name); //user1.name is also legal//
+                //but not reliable
+                                
+            },//we can omit function
+            
+
+        };
+    
+        function makeUser() {
+  return {
+    name: "John",
+    ref: this
+  };
+}
+
+let user = makeUser();
+
+alert( user.ref.name ); // Error: Cannot read property 'name' of undefined
+//作为一个普通函数被调用的（前面没有点，没有对象）。
+// 在 JS 严格模式下，普通函数内部的 this 是 undefined。
+
+function makeUser() {
+  return {
+    name: "John",
+    ref() {
+      return this;
+    }
+  };
+}
+
+let user = makeUser();
+
+alert( user.ref().name ); // John
+//
+
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep: function() { // shows the current step
+    alert( this.step );
+    return this;
+  }
+};
     </script>
 </body>
 </html>
