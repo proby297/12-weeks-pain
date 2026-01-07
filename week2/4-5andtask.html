@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User(name) {
+            this.name = name;
+            this.isAdmin = false;
+        }
+        let user = new User('lee');
+        let literalUser = {
+            name: 'lee',
+            isAdmin: false,
+        }
+        //above 2 ways to create a new object are legal.
+        //there is also a quick creat and call method 
+        //just need to add a new before u creat the funtion.
+        // like that 
+        let user1 = new function() {
+            this.name = 'john'
+        };
+        // as u can see it's a onetime function
+        
+
+    </script>
+</body>
+</html>
