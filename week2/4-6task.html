@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function User(user) {
+            this.user = user;
+            this.admin = false;
+        }
+        let user1 = new User('Jack');
+        //we have a type called immediately call it with new 
+        let user = new function() {
+            this.name = 'lee';
+            this.admin  = false;
+        }//this is one time creation with new method/
+        function Calculator() {
+            this.value1 = none;
+            this.value2 = none;
+            this.read = function(){
+                 this.value1 = +prompt("input first value", '');
+                 this.value2 = +prompt('input second value','');
+            }
+            this.sum = function(){
+                return this.value1 + this.value2;
+            }
+               }
+        let calculator = new Calculator();
+         calculator.read();
+
+        alert( "Sum=" + calculator.sum() );
+        alert( "Mul=" + calculator.mul() );
+    </script>
+</body>
+</html>
